@@ -17,7 +17,7 @@ const (
 	Failed
 )
 
-type Task struct {
+type Pod struct {
 	ID            uuid.UUID
 	Name          string
 	state         State
@@ -31,9 +31,9 @@ type Task struct {
 	FinishTime    time.Time
 }
 
-type TaskEvent struct {
+type PodEvent struct {
 	ID        uuid.UUID
 	State     State
 	Timestamp time.Time
-	Task      Task
+	Pod       Pod
 }
